@@ -1,6 +1,5 @@
 package com.jetpacker06.CreateBrokenBad.effect;
 
-import com.jetpacker06.CreateBrokenBad.register.CBBEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;

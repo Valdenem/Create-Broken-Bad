@@ -14,7 +14,7 @@ public class CBBEffects {
             DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, CreateBrokenBad.MOD_ID);
 
     public static final RegistryObject<MobEffect> METH =
-            EFFECTS.register("meth", () -> new MethEffect());
+            EFFECTS.register("meth", MethEffect::new);
 
     public static final RegistryObject<MobEffect> WITHDRAWAL =
             EFFECTS.register("withdrawal", WithdrawalEffect::new);
