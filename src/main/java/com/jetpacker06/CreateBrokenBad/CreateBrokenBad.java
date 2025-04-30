@@ -25,6 +25,7 @@ public class CreateBrokenBad {
         CBBBlocks.register(registrate);
         CBBFluids.register(registrate);
         CBBBlockEntityTypes.register(registrate);
+        CBBEffects.register(eventBus);
         Tab.register(registrate, eventBus);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);

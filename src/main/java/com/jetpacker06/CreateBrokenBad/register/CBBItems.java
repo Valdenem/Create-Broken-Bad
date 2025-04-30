@@ -1,9 +1,6 @@
 package com.jetpacker06.CreateBrokenBad.register;
 
-import com.jetpacker06.CreateBrokenBad.item.MatchItem;
-import com.jetpacker06.CreateBrokenBad.item.MethItem;
-import com.jetpacker06.CreateBrokenBad.item.NonConsumedCatalystItem;
-import com.jetpacker06.CreateBrokenBad.item.ToolTippedItem;
+import com.jetpacker06.CreateBrokenBad.item.*;
 import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -16,7 +13,7 @@ public class CBBItems {
 
     public static ItemEntry<MatchItem> MATCH;
     public static ItemEntry<Item> PSEUDOPHEDRINE;
-    public static ItemEntry<ToolTippedItem> SUDAFED;
+    public static ItemEntry<SudafedItem> SUDAFED;
     public static ItemEntry<ToolTippedItem> SUDAFED_BOX;
     public static ItemEntry<ToolTippedItem> EPHEDRA;
     public static ItemEntry<ItemNameBlockItem> EPHEDRA_SEEDS;
@@ -44,7 +41,11 @@ public class CBBItems {
         MATCH = REGISTRATE.item("match", MatchItem::new)
                 //.lang("Match")
                 .register();
-        SUDAFED = REGISTRATE.item("sudafed", p -> new ToolTippedItem("sudafed_tooltip", p))
+        /*SUDAFED = REGISTRATE.item("sudafed", p -> new ToolTippedItem("sudafed_tooltip", p))
+                //.lang("Sudafed")
+                .register();
+         */
+        SUDAFED = REGISTRATE.item("sudafed", SudafedItem::new)
                 //.lang("Sudafed")
                 .register();
         SUDAFED_BOX = REGISTRATE.item("sudafed_box", p -> new ToolTippedItem("sudafed_box_tooltip", p))
