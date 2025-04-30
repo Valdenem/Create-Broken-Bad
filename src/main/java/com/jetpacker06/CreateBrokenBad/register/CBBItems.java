@@ -26,7 +26,7 @@ public class CBBItems {
     public static ItemEntry<Item> CRUSHED_COPPER;
     public static ItemEntry<Item> CRUSHED_ZINC;
     public static ItemEntry<NonConsumedCatalystItem> COPPER_ZINC_CATALYST;
-    public static ItemEntry<Item> CYANIDE;
+    public static ItemEntry<CyanideItem> CYANIDE;
     public static ItemEntry<NonConsumedCatalystItem> ALUMINOSILICATE_CATALYST;
     public static ItemEntry<Item> ALUMINOSILICATE_CHUNK;
     public static ItemEntry<Item> ALUMINOSILICATE_BIT;
@@ -82,6 +82,7 @@ public class CBBItems {
         COPPER_ZINC_CATALYST = REGISTRATE.item("copper_zinc_catalyst", NonConsumedCatalystItem::new)
                 //.lang("Copper-Zinc Catalyst")
                 .register();
+        /*
         CYANIDE = REGISTRATE.item("cyanide", Item::new)
                 .properties(p -> p.food(new FoodProperties.Builder()
                         .alwaysEat()
@@ -89,6 +90,9 @@ public class CBBItems {
                         .effect(() -> new MobEffectInstance(MobEffects.POISON, 60, 4), 1)
                         .build()
                 ))
+                .register();
+         */
+        CYANIDE = REGISTRATE.item("cyanide", CyanideItem::new)
                 .register();
         ALUMINOSILICATE_CATALYST = REGISTRATE.item("aluminosilicate_catalyst", NonConsumedCatalystItem::new)
                 //.lang("Aluminosilicate Catalyst")
