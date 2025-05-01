@@ -1,5 +1,7 @@
 package com.jetpacker06.CreateBrokenBad.item;
 
+import com.jetpacker06.CreateBrokenBad.register.CBBEffects;
+import com.jetpacker06.CreateBrokenBad.register.CBBFluids;
 import com.jetpacker06.CreateBrokenBad.util.TooltipHelper;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -31,15 +33,32 @@ public class SudafedItem extends Item {
     public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pLivingEntity) {
         if (!pLevel.isClientSide) {
             List<MobEffectInstance> effectsToRemove = new ArrayList<>();
-
             for (MobEffectInstance effectInstance : pLivingEntity.getActiveEffects()) {
-                if (effectInstance.getEffect().getCategory() == MobEffectCategory.HARMFUL) {
+                if (effectInstance.getEffect().getCategory() == MobEffectCategory.HARMFUL && effectInstance.getEffect() != CBBEffects.WITHDRAWAL.get()) {
                     effectsToRemove.add(effectInstance);
                 }
             }
-
             for (MobEffectInstance effect : effectsToRemove) {
                 pLivingEntity.removeEffect(effect.getEffect());
+            }
+            MobEffectInstance withdrawal = pLivingEntity.getEffect(CBBEffects.WITHDRAWAL.get());
+            if (withdrawal != null) {
+                int newDuration = withdrawal.getDuration() - (30*20); // Reduce by 30 seconds
+
+                if (newDuration > 0) {
+                    pLivingEntity.removeEffect(CBBEffects.WITHDRAWAL.get());
+                    pLivingEntity.addEffect(new MobEffectInstance(
+                            withdrawal.getEffect(),
+                            newDuration,
+                            withdrawal.getAmplifier(),
+                            withdrawal.isAmbient(),
+                            withdrawal.isVisible(),
+                            withdrawal.showIcon()
+                    ));
+                } else {
+                    // Remove if duration would be <= 0
+                    pLivingEntity.removeEffect(CBBEffects.WITHDRAWAL.get());
+                }
             }
         }
         return super.finishUsingItem(pStack, pLevel, pLivingEntity);
