@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "createbb:meth_bag"
+    }
+  ],
+  "result": {
+    "item": "createbb:blue_meth",
+    "count": 16
+  }
+}

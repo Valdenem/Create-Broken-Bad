@@ -108,7 +108,7 @@ public class CBBItems {
         BLUE_METH = REGISTRATE.item("blue_meth", MethItem.Blue::new)
                 //.lang("Blue Meth")
                 .register();
-        METH_BAG = REGISTRATE.item("meth_bag", Item::new)
+        METH_BAG = REGISTRATE.item("meth_bag", Item::new).properties(p -> p.stacksTo(4))
                 .register();
     }
 }

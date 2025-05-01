@@ -1,0 +1,61 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "createbb:blue_meth"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    }
+  ],
+  "results": [
+    {
+      "item": "createbb:meth_bag"
+    }
+  ]
+}
