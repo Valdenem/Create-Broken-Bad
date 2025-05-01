@@ -1,5 +1,6 @@
 package com.jetpacker06.CreateBrokenBad.effect;
 
+import com.jetpacker06.CreateBrokenBad.register.CBBEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -13,8 +14,12 @@ public class MethEffect extends MobEffect {
 
     @Override
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-        pLivingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 40, pAmplifier));
-        pLivingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, pAmplifier));
+        pLivingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, pAmplifier, false, false, false));
+        pLivingEntity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 40, pAmplifier, false, false, false));
+        MobEffectInstance instance = pLivingEntity.getEffect(this);
+        if (instance != null && instance.getDuration() <= 1) {
+            pLivingEntity.addEffect(new MobEffectInstance(CBBEffects.WITHDRAWAL.get(), 20 * 30 * (pAmplifier + 1), pAmplifier));
+        }
     }
 
     @Override
