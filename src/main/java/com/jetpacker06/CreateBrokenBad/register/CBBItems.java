@@ -30,6 +30,8 @@ public class CBBItems {
     public static ItemEntry<Item> NITROGEN;
     public static ItemEntry<MethItem.Blue> BLUE_METH;
 
+    public static ItemEntry<Item> METH_BAG;
+
     public static void register(Registrate REGISTRATE) {
 
         PSEUDOPHEDRINE = REGISTRATE.item("pseudophedrine", Item::new)
@@ -105,6 +107,8 @@ public class CBBItems {
                 .register();
         BLUE_METH = REGISTRATE.item("blue_meth", MethItem.Blue::new)
                 //.lang("Blue Meth")
+                .register();
+        METH_BAG = REGISTRATE.item("meth_bag", Item::new)
                 .register();
     }
 }

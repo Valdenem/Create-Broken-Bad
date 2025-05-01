@@ -56,10 +56,12 @@
   "match_tooltip": "§8Single-use firestarter.",
   "brass_call_bell_tooltip": "§8Ding!",
   "ephedra_tooltip": "§8Buy it from farmers.",
-  "item.createbb.sudafed.tooltip": "Removes all _negative_ effects when consumed.",
+  "item.createbb.sudafed.tooltip": "Only removes _harmful_ effects when consumed. Shortens _withdrawal_ time by 30 seconds",
 
   "effect.createbb.meth": "Tripping",
   "effect.createbb.withdrawal": "Withdrawal",
+
+  "item.createbb.meth_bag": "Meth Bag",
 
 
   "itemGroup.CreateBB": "Create: Broken Bad"
