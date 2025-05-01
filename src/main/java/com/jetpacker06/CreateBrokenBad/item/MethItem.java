@@ -48,7 +48,7 @@ public class MethItem extends Item {
                     .nutrition(0)
                     .saturationMod(0)
                     .effect(() -> new MobEffectInstance(CBBEffects.METH.get(), 1200, 0), 1)
-                    .build()));
+                    .build()).stacksTo(16));
         }
         @Override
         public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
@@ -73,7 +73,7 @@ public class MethItem extends Item {
                     .nutrition(0)
                     .saturationMod(0)
                     .effect(() -> new MobEffectInstance(CBBEffects.METH.get(), 600, 0), 1)
-                    .build()));
+                    .build()).stacksTo(16));
         }
         @Override
         public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {

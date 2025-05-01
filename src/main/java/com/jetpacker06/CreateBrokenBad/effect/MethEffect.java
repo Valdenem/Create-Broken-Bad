@@ -6,8 +6,12 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+
+import java.util.List;
 
 public class MethEffect extends MobEffect {
+    private static final List<ItemStack> EMPTY_CURATIVE_ITEMS = List.of();
     public MethEffect() {
         super(MobEffectCategory.BENEFICIAL, 0xAA00FF);
     }
@@ -25,5 +29,10 @@ public class MethEffect extends MobEffect {
     @Override
     public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
         return true;
+    }
+
+    @Override
+    public List<ItemStack> getCurativeItems() {
+        return EMPTY_CURATIVE_ITEMS;
     }
 }
