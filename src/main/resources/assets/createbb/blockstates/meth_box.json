@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "createbb:block/meth_box",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "createbb:block/meth_box"
+    },
+    "facing=south": {
+      "model": "createbb:block/meth_box",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createbb:block/meth_box",
+      "y": 270
+    }
+  }
+}

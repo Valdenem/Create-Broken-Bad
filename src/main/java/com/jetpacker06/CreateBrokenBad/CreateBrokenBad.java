@@ -2,6 +2,8 @@ package com.jetpacker06.CreateBrokenBad;
 
 import com.jetpacker06.CreateBrokenBad.register.*;
 import com.tterrag.registrate.Registrate;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -36,6 +38,7 @@ public class CreateBrokenBad {
             ComposterBlock.COMPOSTABLES.put(CBBItems.EPHEDRA.get(), 0.3f);
             ComposterBlock.COMPOSTABLES.put(CBBItems.EPHEDRA_SEEDS.get(), 0.65f);
         });
+        ItemBlockRenderTypes.setRenderLayer(CBBBlocks.METH_BOX.get(), RenderType.translucent());
         
         AllCustomTriggerAdvancements.register();
     }

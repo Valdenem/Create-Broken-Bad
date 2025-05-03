@@ -2,6 +2,7 @@ package com.jetpacker06.CreateBrokenBad.register;
 
 import com.jetpacker06.CreateBrokenBad.block.BrassCallBellBlock;
 import com.jetpacker06.CreateBrokenBad.block.EphedraBlock;
+import com.jetpacker06.CreateBrokenBad.block.MethBoxBlock;
 import com.jetpacker06.CreateBrokenBad.block.TrayBlock;
 import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.entry.BlockEntry;
@@ -15,6 +16,7 @@ public class CBBBlocks {
     public static BlockEntry<TrayBlock.Blue> BLUE_METH_TRAY;
     public static BlockEntry<TrayBlock.Empty> TRAY;
     public static BlockEntry<TrayBlock.White> WHITE_METH_TRAY;
+    public static BlockEntry<MethBoxBlock> METH_BOX;
 
     public static void register(Registrate REGISTRATE) {
         EPHEDRA_CROP_BLOCK = REGISTRATE.block("ephedra_crop_block", EphedraBlock::new)
@@ -40,5 +42,9 @@ public class CBBBlocks {
         WHITE_METH_TRAY = REGISTRATE.block("white_meth_tray", TrayBlock.White::new)
                 .simpleItem()
                 //.lang("White Meth Tray")
-                .register();}
+                .register();
+        METH_BOX = REGISTRATE.block("meth_box", MethBoxBlock::new)
+                .simpleItem()
+                .register();
+    }
 }
